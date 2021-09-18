@@ -1,0 +1,207 @@
+	
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Discord Info</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Manrope:wght@600&family=Monda&family=Montserrat&family=Roboto+Mono&family=Tajawal&display=swap&family=Nova+Flat&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet">
+		<meta name="author" content="TARIQ">
+		<link rel="stylesheet" href="/css/mdb.dark.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/all.min.css">
+		<link rel="icon" href="/img/favicon.png">
+		<meta name="keywords" content="discord, user, id, discord user, discord user id, user id, find discord id, find discord user, discord user by id, get user info discord, discord info, discord server, discord template, discord invite, invite, template, server, info">
+		<meta name="description" content="Find discord info about user, server, invite, template, etc.">
+		<meta property="og:title" content="Discord Info" />
+		<meta property="og:description" content="Find discord info about user, server, invite, template, etc." />
+		<meta property="og:url" content="/"/>
+		<meta name="theme-color" content="#7461fb"/>
+		<meta property="og:image" content="https://cdn.discordapp.com/attachments/807191987371114506/846455908514136134/favicon.png"/>
+		
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+		<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark/dark.css" rel="stylesheet">
+	</head>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+			<div class="container">
+				<a class="navbar-brand me-2" href="/">
+					<img oncontextmenu="return false" draggable="false" width="30px" src="/img/favicon.png" />
+					&nbsp;<span class="fs-6">Discord Info</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarButtonsExample">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item" onclick="search('user')">
+							<a class="nav-link cursor-pointer">User</a>
+						</li>
+						<li class="nav-item" onclick="search('server')">
+							<a class="nav-link cursor-pointer">Server</a>
+						</li>
+						<li class="nav-item" onclick="search('invite')">
+							<a class="nav-link cursor-pointer">Invite</a>
+						</li>
+						<li class="nav-item" onclick="search('template')">
+							<a class="nav-link cursor-pointer">Template</a>
+						</li>
+					</ul>
+					<div class="d-flex align-items-center">
+						<a href="/tariq" target="_blank">
+							<button type="button" class="btn btn-custom me-3">
+								Author
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+	<div class="mt-5"></div>
+	<center class="container">
+		<div class="row text-start">
+			<div class="col-sm-6 my-2">
+				<div class="card">
+					<div class="card-header pt-3">
+						<h5 class="card-title"><i class="fad fa-user"></i> User Info</h5>
+						<p class="card-text">
+							Get info about a user using their ID
+						</p>
+						<div class="note note-info">
+							This works for any valid discord user
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="form-outline">
+							<input id="user" class="form-control" />
+							<label class="form-label">User ID</span>
+						</div>
+					</div>
+					<div class="card-footer">
+						<button onclick="searchMain('user')" class="btn btn-custom">Search</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 my-2">
+				<div class="card">
+					<div class="card-header pt-3">
+						<h5 class="card-title"><i class="fad fa-server"></i> Server info</h5>
+						<p class="card-text">
+							Get info about a server using their ID
+						</p>
+						<div class="note note-danger">
+							This only works for discover able servers
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="form-outline">
+							<input id="server" class="form-control" />
+							<label class="form-label">Server ID</span>
+						</div>
+					</div>
+					<div class="card-footer">
+						<button onclick="searchMain('server')" class="btn btn-custom">Search</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 my-2">
+				<div class="card">
+					<div class="card-header pt-3">
+						<h5 class="card-title"><i class="fad fa-link"></i> Invite info</h5>
+						<p class="card-text">
+							Get info about a invite creator &amp; server using invite link/code
+						</p>
+						<div class="note note-info">
+							This works for any valid invite link
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="form-outline">
+							<input id="invite" class="form-control" />
+							<label class="form-label">Link/Code</span>
+						</div>
+					</div>
+					<div class="card-footer">
+						<button onclick="searchMain('invite')" class="btn btn-custom">Search</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 my-2">
+				<div class="card">
+					<div class="card-header pt-3">
+						<h5 class="card-title"><i class="fad fa-layer-plus"></i> Template info</h5>
+						<p class="card-text">
+							Get info about a template using template link/code
+						</p>
+						<div class="note note-info">
+							This works for any existed template
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="form-outline">
+							<input id="template" class="form-control" />
+							<label class="form-label">Link/Code</span>
+						</div>
+					</div>
+					<div class="card-footer">
+						<button onclick="searchMain('template')" class="btn btn-custom">Search</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+	
+			
+		<div style="margin-top: 5%;"></div>
+		<footer class="text-center text-lg-start bg-custom text-muted">
+			<section class="d-flex border-bottom">
+				<div class="container text-start text-md-start mt-5">
+					<div class="row">
+						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+							<h6 class="mb-4 text-white text-uppercase"><img width="30px" src="/img/favicon.png" />&nbsp; Discord Info</h6>
+							<p>
+								The most modern discord info website that supports most features including user info, server info, invite info &amp; template info
+							</p>
+						</div>
+						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-search"></i> Search</h6>
+							<p onclick="search('user')"><a class="cursor-pointer text-reset">User</a></p>
+							<p onclick="search('server')"><a class="cursor-pointer text-reset">Server</a></p>
+							<p onclick="search('invite')"><a class="cursor-pointer text-reset">Invite</a></p>
+							<p onclick="search('template')"><a class="cursor-pointer text-reset">Template</a></p>
+						</div>
+						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-link"></i> Links</h6>
+							<p><a href="/author" class="text-reset">Author</a></p>
+							<p><a href="/discord" class="text-reset">Discord Server</a></p>
+						</div>
+						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-address-card"></i> Contact</h6>
+							<p>
+								<a class="text-muted" href="/cdn-cgi/l/email-protection#ccafa3a2b8adafb88ca5b8adbea5bde2a8a9ba">
+									<i class="fas fa-envelope me-3"></i>
+									<span class="__cf_email__" data-cfemail="21424e4f55404255614855405348500f454457">[email&#160;protected]</span>
+								</a>
+							</p>
+							<p><a href="/discord" target="_blank"><i class="fab fa-discord me-3"></i> Discord Server</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+				© 2021 Copyright,
+				<a class="text-reset fw-bold" href="/author" target="_blank">TARIQ</a>
+			</div>
+		</footer>
+		
+		<input id="copyinput" hidden />
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/all.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
+	

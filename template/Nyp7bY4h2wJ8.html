@@ -1,0 +1,419 @@
+	
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Discord Info</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Manrope:wght@600&family=Monda&family=Montserrat&family=Roboto+Mono&family=Tajawal&display=swap&family=Nova+Flat&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet">
+		<meta name="author" content="TARIQ">
+		<link rel="stylesheet" href="/css/mdb.dark.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/all.min.css">
+		<link rel="icon" href="/img/favicon.png">
+		<meta name="keywords" content="discord, user, id, discord user, discord user id, user id, find discord id, find discord user, discord user by id, get user info discord, discord info, discord server, discord template, discord invite, invite, template, server, info">
+		<meta name="description" content="Find discord info about user, server, invite, template, etc.">
+		<meta property="og:title" content="Discord Info" />
+		<meta property="og:description" content="Find discord info about user, server, invite, template, etc." />
+		<meta property="og:url" content="/"/>
+		<meta name="theme-color" content="#7461fb"/>
+		<meta property="og:image" content="https://cdn.discordapp.com/attachments/807191987371114506/846455908514136134/favicon.png"/>
+		
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+		<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark/dark.css" rel="stylesheet">
+	</head>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+			<div class="container">
+				<a class="navbar-brand me-2" href="/">
+					<img oncontextmenu="return false" draggable="false" width="30px" src="/img/favicon.png" />
+					&nbsp;<span class="fs-6">Discord Info</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarButtonsExample">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item" onclick="search('user')">
+							<a class="nav-link cursor-pointer">User</a>
+						</li>
+						<li class="nav-item" onclick="search('server')">
+							<a class="nav-link cursor-pointer">Server</a>
+						</li>
+						<li class="nav-item" onclick="search('invite')">
+							<a class="nav-link cursor-pointer">Invite</a>
+						</li>
+						<li class="nav-item" onclick="search('template')">
+							<a class="nav-link cursor-pointer">Template</a>
+						</li>
+					</ul>
+					<div class="d-flex align-items-center">
+						<a href="/tariq" target="_blank">
+							<button type="button" class="btn btn-custom me-3">
+								Author
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+	<div style="margin-top: 7%;"></div>
+	<center class="container">
+		<div class="text-start note note-info mb-4 d-inline-block">
+			You can click any type of data to copy it
+		</div>
+		<div class="card">
+			
+				<div class="card-header text-start fs-5">
+					test
+				</div>
+				<div class="card-body text-start">
+					<div class="row">
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="test" onclick="copy(this.value)" readonly />
+								<label class="form-label">Name</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="Nyp7bY4h2wJ8" onclick="copy(this.value)" readonly />
+								<label class="form-label">Code</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="875830058298773554" onclick="copy(this.value)" readonly />
+								<label class="form-label">Guild ID</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="0" onclick="copy(this.value)" readonly />
+								<label class="form-label">Usage Count</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="8/28/2021, 3:46:40 PM" onclick="copy(this.value)" readonly />
+								<label class="form-label">Updated At</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="8/28/2021, 3:46:40 PM" onclick="copy(this.value)" readonly />
+								<label class="form-label">Created At</span>
+							</div>
+						</div>
+						<div class="col-sm-12 my-2">
+							<div class="form-outline">
+								<textarea rows="1" class="cursor-pointer form-control" onclick="copy(this.value)" readonly>No Description</textarea>
+								<label class="form-label">Description</span>
+							</div>
+						</div>
+					</div>
+					<div class="card bg-card mt-2">
+						<div class="card-header">
+							Guild Data
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-4 my-2">
+									<div class="form-outline">
+										<input class="cursor-pointer form-control" value="RA2SMAL |💸رقص مال" onclick="copy(this.value)" readonly />
+										<label class="form-label">Name</span>
+									</div>
+								</div>
+								<div class="col-sm-4 my-2">
+									<div class="form-outline">
+										<input class="cursor-pointer form-control" value="Low" onclick="copy(this.value)" readonly />
+										<label class="form-label">Verification Level</span>
+									</div>
+								</div>
+								<div class="col-sm-4 my-2">
+									<div class="form-outline">
+										<input class="cursor-pointer form-control" value="5m" onclick="copy(this.value)" readonly />
+										<label class="form-label">AFK Timeout</span>
+									</div>
+								</div>
+								<div class="col-sm-12 my-2">
+									<div class="form-outline">
+										<textarea rows="1" class="cursor-pointer form-control" onclick="copy(this.value)" readonly>No Description</textarea>
+										<label class="form-label">Description</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 my-2">
+									<div class="card">
+										<div class="card-header">Channels (21)</div>
+										<div class="card-body role-channel-card">
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-hashtag"></i>
+													
+													moderator-only
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-layer-group"></i>
+													
+													information - معلومات
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													Florida TV
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-hashtag"></i>
+													
+													ra2smal
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-layer-group"></i>
+													
+													RA2SMAL Streaming
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													Dobl X
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-layer-group"></i>
+													
+													general - العام
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													HBK
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-layer-group"></i>
+													
+													RA2SMAL Audios
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													Florida
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-hashtag"></i>
+													
+													welcome
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-layer-group"></i>
+													
+													RA2SMAL Records
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													Tesla
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-hashtag"></i>
+													
+													chat
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													Beluga
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-hashtag"></i>
+													
+													cmd
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													BALLON D’OR 💸🥇
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-hashtag"></i>
+													
+													games
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													shokran
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													💸رقص مال
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													
+														<i class="fad fa-volume"></i>
+													
+													فلوريدا
+												</button>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 my-2">
+									<div class="card">
+										<div class="card-header">Roles (4)</div>
+										<div class="card-body role-channel-card">
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													@everyone
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													@Records
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													@فلوريدا
+												</button>
+											
+												<button class="fs-6 text-start btn role-channel-btn my-1 ellipsis w-100">
+													@💸رقص مال
+												</button>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+						<div class="card bg-card mt-2">
+							<div class="card-header">
+								Creator
+							</div>
+							<div class="card-body text-center">
+								<div class="card text-start d-inline-block">
+									<div class="card-header text-center">
+										<img style="max-width: 400px;" class="rounded" oncontextmenu="return false" draggable="false" src="https://cdn.discordapp.com/avatars/510970297814614016/f1bf7b0e85efa82bd2ddea0ac1d84acc.webp" />
+										<h4 class="mt-2"><a href="https://cdn.discordapp.com/avatars/510970297814614016/f1bf7b0e85efa82bd2ddea0ac1d84acc.webp" target="_blank">[Avatar Link]</a></h4>
+									</div>
+									<div class="card-body">
+										<h4 class="mb-0 mt-1">Gaber..<span class="text-muted fs-5">#3247</span></h4>
+										
+										<h4><img src='https://cdn.discordapp.com/emojis/807948271108227122.png?v=1' width='25' draggable='false' oncontextmenu='return false' /></h4>
+										<h5>Bot: 
+											
+												<img src="https://cdn.discordapp.com/emojis/684418605479493643.png?v=1" width="25">
+											
+										</h5>
+										<h5>ID: 510970297814614016</h5>
+										<h5 class="mb-0">Created At: 11/11/2018, 1:13:32 AM</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			
+			<div class="card-footer text-start">
+				<a href="/">
+					<button class="btn btn-custom"><i class="fad fa-arrow-left"></i>&nbsp; Go Back</button>
+				</a>
+			</div>
+		</div>
+	</center>
+	
+			
+		<div style="margin-top: 5%;"></div>
+		<footer class="text-center text-lg-start bg-custom text-muted">
+			<section class="d-flex border-bottom">
+				<div class="container text-start text-md-start mt-5">
+					<div class="row">
+						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+							<h6 class="mb-4 text-white text-uppercase"><img width="30px" src="/img/favicon.png" />&nbsp; Discord Info</h6>
+							<p>
+								The most modern discord info website that supports most features including user info, server info, invite info &amp; template info
+							</p>
+						</div>
+						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-search"></i> Search</h6>
+							<p onclick="search('user')"><a class="cursor-pointer text-reset">User</a></p>
+							<p onclick="search('server')"><a class="cursor-pointer text-reset">Server</a></p>
+							<p onclick="search('invite')"><a class="cursor-pointer text-reset">Invite</a></p>
+							<p onclick="search('template')"><a class="cursor-pointer text-reset">Template</a></p>
+						</div>
+						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-link"></i> Links</h6>
+							<p><a href="/author" class="text-reset">Author</a></p>
+							<p><a href="/discord" class="text-reset">Discord Server</a></p>
+						</div>
+						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-address-card"></i> Contact</h6>
+							<p>
+								<a class="text-muted" href="/cdn-cgi/l/email-protection#c3a0acadb7a2a0b783aab7a2b1aab2eda7a6b5">
+									<i class="fas fa-envelope me-3"></i>
+									<span class="__cf_email__" data-cfemail="bcdfd3d2c8dddfc8fcd5c8ddced5cd92d8d9ca">[email&#160;protected]</span>
+								</a>
+							</p>
+							<p><a href="/discord" target="_blank"><i class="fab fa-discord me-3"></i> Discord Server</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+				© 2021 Copyright,
+				<a class="text-reset fw-bold" href="/author" target="_blank">TARIQ</a>
+			</div>
+		</footer>
+		
+		<input id="copyinput" hidden />
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/all.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
+	

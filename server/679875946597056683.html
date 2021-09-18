@@ -1,0 +1,462 @@
+	
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Discord Info</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Manrope:wght@600&family=Monda&family=Montserrat&family=Roboto+Mono&family=Tajawal&display=swap&family=Nova+Flat&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet">
+		<meta name="author" content="TARIQ">
+		<link rel="stylesheet" href="/css/mdb.dark.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/all.min.css">
+		<link rel="icon" href="/img/favicon.png">
+		<meta name="keywords" content="discord, user, id, discord user, discord user id, user id, find discord id, find discord user, discord user by id, get user info discord, discord info, discord server, discord template, discord invite, invite, template, server, info">
+		<meta name="description" content="Find discord info about user, server, invite, template, etc.">
+		<meta property="og:title" content="Discord Info" />
+		<meta property="og:description" content="Find discord info about user, server, invite, template, etc." />
+		<meta property="og:url" content="/"/>
+		<meta name="theme-color" content="#7461fb"/>
+		<meta property="og:image" content="https://cdn.discordapp.com/attachments/807191987371114506/846455908514136134/favicon.png"/>
+		
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+		<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark/dark.css" rel="stylesheet">
+	</head>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+			<div class="container">
+				<a class="navbar-brand me-2" href="/">
+					<img oncontextmenu="return false" draggable="false" width="30px" src="/img/favicon.png" />
+					&nbsp;<span class="fs-6">Discord Info</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarButtonsExample">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item" onclick="search('user')">
+							<a class="nav-link cursor-pointer">User</a>
+						</li>
+						<li class="nav-item" onclick="search('server')">
+							<a class="nav-link cursor-pointer">Server</a>
+						</li>
+						<li class="nav-item" onclick="search('invite')">
+							<a class="nav-link cursor-pointer">Invite</a>
+						</li>
+						<li class="nav-item" onclick="search('template')">
+							<a class="nav-link cursor-pointer">Template</a>
+						</li>
+					</ul>
+					<div class="d-flex align-items-center">
+						<a href="/tariq" target="_blank">
+							<button type="button" class="btn btn-custom me-3">
+								Author
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+	<div style="margin-top: 7%;"></div>
+	<center class="container">
+		<div class="text-start note note-info mb-4 d-inline-block">
+			You can click any type of data to copy it
+		</div>
+		<div class="card">
+			
+				<div class="card-header text-start fs-5">
+					VALORANT
+				</div>
+				<div class="card-body text-start">
+					<div class="row">
+						<div class="col-sm-4 my-1">
+							<div class="card bg-card">
+								<div class="card-header">
+									Icon
+								</div>
+								<div class="card-body text-center">
+									<img class="rounded cursor-pointer" onclick="copy(this.src)" src="https://cdn.discordapp.com/icons/679875946597056683/a_38ee91104cda80780b4aabd49c77627b.gif" />
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 my-1">
+							<div class="card bg-card">
+								<div class="card-header">
+									Splash Image
+								</div>
+								<div class="card-body text-center">
+									<img class="rounded cursor-pointer" onclick="copy(this.src)" src="https://cdn.discordapp.com/splashes/679875946597056683/b91f5a4b7bc1b0b7b7e254c46f142ea5.webp" />
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 my-1">
+							<div class="card bg-card">
+								<div class="card-header">
+									Discovery Splash Image
+								</div>
+								<div class="card-body text-center">
+									<img class="rounded cursor-pointer" onclick="copy(this.src)" src="https://cdn.discordapp.com/discovery-splashes/679875946597056683/c9581a9bea1dff2b12a71e95f297b9ba.webp" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="VALORANT" onclick="copy(this.value)" readonly />
+								<label class="form-label">Name</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="679875946597056683" onclick="copy(this.value)" readonly />
+								<label class="form-label">ID</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="800,000" onclick="copy(this.value)" readonly />
+								<label class="form-label">Approximate Members</span>
+							</div>
+						</div>
+						<div class="col-sm-4 my-2">
+							<div class="form-outline">
+								<input class="cursor-pointer form-control" value="253,434" onclick="copy(this.value)" readonly />
+								<label class="form-label">Approximate Online Members</span>
+							</div>
+						</div>
+						<div class="col-sm-8 my-2">
+							<div class="form-outline">
+								<textarea rows="1" class="cursor-pointer form-control" onclick="copy(this.value)" readonly>The VALORANT Discord server, in collaboration with Riot Games. We offer the latest news, LFGs and various chats.</textarea>
+								<label class="form-label">Description</span>
+							</div>
+						</div>
+					</div>
+					<div class="card bg-card">
+						<div class="card-header">
+							Features
+						</div>
+						<div class="card-body">
+							<ul class="mb-0">
+								
+									<li>THREE_DAY_THREAD_ARCHIVE</li>
+								
+									<li>PARTNERED</li>
+								
+									<li>PRIVATE_THREADS</li>
+								
+									<li>BANNER</li>
+								
+									<li>VANITY_URL</li>
+								
+									<li>PREVIEW_ENABLED</li>
+								
+									<li>NEW_THREAD_PERMISSIONS</li>
+								
+									<li>NEWS</li>
+								
+									<li>INVITE_SPLASH</li>
+								
+									<li>FEATURABLE</li>
+								
+									<li>VIP_REGIONS</li>
+								
+									<li>THREADS_ENABLED</li>
+								
+									<li>WELCOME_SCREEN_ENABLED</li>
+								
+									<li>SEVEN_DAY_THREAD_ARCHIVE</li>
+								
+									<li>MEMBER_VERIFICATION_GATE_ENABLED</li>
+								
+									<li>DISCOVERABLE</li>
+								
+									<li>ANIMATED_ICON</li>
+								
+									<li>COMMUNITY</li>
+								
+									<li>ROLE_ICONS</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="card bg-card mt-2">
+						<div class="card-header">
+							Emojis
+						</div>
+						<div class="card-body">
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/685247196979134495.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827450107985920.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827460916576266.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827472816078858.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827488141803590.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827500120997958.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827510552100898.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827522338226237.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827534052655237.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827547302723657.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/709827557654134870.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/717152051767017522.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/717164116762165288.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/717164802300182619.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759656735441006.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759695851520011.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759721491431445.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759769704824882.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759799677452371.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759869592174665.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759900328165436.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/724759930653114399.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920335156805735.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920361325199420.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920392233025536.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920430690467852.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920458121216153.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920596394967072.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920627537543310.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920657556176916.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735920686987476992.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735922485404631081.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/735936233896673413.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/740159055946842142.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/740281681495195758.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245816544329848.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817047777382.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817689374822.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817718997015.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817739837533.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817752289391.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817874055188.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817945489589.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245817970393168.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245818004078712.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245818020855828.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/756245818037633034.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/771887035774533672.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/771887306377920543.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/776341737853026344.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/776341745134862346.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/776341765039980565.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/776341776243097601.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/776341794405220362.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/798624357261508618.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/802542030684553276.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/803711976307949619.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/803712630177923082.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/818987103022743562.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/822102064972169286.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/822486434430320711.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837051320077910056.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375876373938309.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375876420337695.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375876744216646.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375876797562890.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375876806344830.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375876936892536.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375877259984956.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375877348065296.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837375877469306930.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837396757218066472.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837396757532377108.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837396757561606155.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/837396757587296266.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/839929579808227379.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/844135990402351104.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/844940266808147988.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/845566201677348875.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/846553148435857448.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/846643543198924821.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/847325975356243968.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/848104673792622622.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/849973443545399347.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/849973445600346143.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/856888296306376744.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/859868944546529280.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/860432565274148885.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/869931290680520824.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/869931348582887455.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/869931372964368395.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878297903062462504.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878703152688431134.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878703293164060722.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878705347634810920.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878705347639009360.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878705347710320750.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878705347748069386.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878705348058415154.gif" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878705662484443136.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878707117622689804.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/878707117845020734.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/880290877862461480.png" />
+							
+								<img width="30px" src="https://cdn.discordapp.com/emojis/880923296579874826.png" />
+							
+						</div>
+					</div>
+				</div>
+			
+			<div class="card-footer text-start">
+				<a href="/">
+					<button class="btn btn-custom"><i class="fad fa-arrow-left"></i>&nbsp; Go Back</button>
+				</a>
+			</div>
+		</div>
+	</center>
+	
+			
+		<div style="margin-top: 5%;"></div>
+		<footer class="text-center text-lg-start bg-custom text-muted">
+			<section class="d-flex border-bottom">
+				<div class="container text-start text-md-start mt-5">
+					<div class="row">
+						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+							<h6 class="mb-4 text-white text-uppercase"><img width="30px" src="/img/favicon.png" />&nbsp; Discord Info</h6>
+							<p>
+								The most modern discord info website that supports most features including user info, server info, invite info &amp; template info
+							</p>
+						</div>
+						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-search"></i> Search</h6>
+							<p onclick="search('user')"><a class="cursor-pointer text-reset">User</a></p>
+							<p onclick="search('server')"><a class="cursor-pointer text-reset">Server</a></p>
+							<p onclick="search('invite')"><a class="cursor-pointer text-reset">Invite</a></p>
+							<p onclick="search('template')"><a class="cursor-pointer text-reset">Template</a></p>
+						</div>
+						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-link"></i> Links</h6>
+							<p><a href="/author" class="text-reset">Author</a></p>
+							<p><a href="/discord" class="text-reset">Discord Server</a></p>
+						</div>
+						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<h6 class="fw-normal mb-4 text-info"><i class="fad fa-address-card"></i> Contact</h6>
+							<p>
+								<a class="text-muted" href="/cdn-cgi/l/email-protection#9cfff3f2e8fdffe8dcf5e8fdeef5edb2f8f9ea">
+									<i class="fas fa-envelope me-3"></i>
+									<span class="__cf_email__" data-cfemail="6b0804051f0a081f2b021f0a19021a450f0e1d">[email&#160;protected]</span>
+								</a>
+							</p>
+							<p><a href="/discord" target="_blank"><i class="fab fa-discord me-3"></i> Discord Server</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+				© 2021 Copyright,
+				<a class="text-reset fw-bold" href="/author" target="_blank">TARIQ</a>
+			</div>
+		</footer>
+		
+		<input id="copyinput" hidden />
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/all.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
+	

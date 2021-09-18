@@ -1,0 +1,161 @@
+:root{
+	--body:#131c2e;
+	--elements:#202b43;
+	--purple:#7461fb;
+}
+
+body{
+	background-color: var(--body);
+}
+
+.card, .card-header, .card-footer{
+	background-color: var(--elements) !important;
+}
+
+.bg-card .card, .bg-card .card-header, .bg-card .card-footer{
+	background-color: var(--body) !important;
+}
+
+.bg-custom{
+	background-color: var(--elements);
+}
+
+.text-purple{
+	color: var(--purple);
+}
+
+.btn-custom{
+	color: #fff !important;
+	background-color: var(--purple) !important;
+}
+
+.cursor-pointer{
+	cursor: pointer;
+}
+
+.ellipsis{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.role-channel-card{
+	overflow: auto;
+	height: 495px;
+}
+
+.role-channel-btn{
+	padding: .5rem 1rem;
+	border-radius: .25rem;
+	border: 2px solid #d3d3d3;
+	color: #d3d3d3 !important;
+}
+
+::-webkit-scrollbar{
+	background: transparent;
+	width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--purple);
+}
+
+/* material */
+
+.material-tooltip{
+	padding: 10px 15px;
+	font-size: 1rem;
+	z-index: 2000;
+	background-color: transparent;
+	border-radius: 5px;
+	color: #fff;
+	min-height: 36px;
+	line-height: 120%;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	max-width: calc(100% - 4px);
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	visibility: hidden;
+	background-color: #000;
+}
+
+#toast-container{
+	display:block;
+	position:fixed;
+	z-index:10000
+}
+
+@media only screen and (max-width: 600px){
+	#toast-container{
+		min-width:100%;
+		bottom:0%
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px){
+	#toast-container{
+		left:5%;
+		bottom:7%;
+		max-width:90%
+	}
+}
+
+@media only screen and (min-width: 993px){
+	#toast-container{
+		top:10%;
+		right:7%;
+		max-width:86%
+	}
+}
+
+.toast{
+	border-radius: 4px;
+	top: 35px;
+	width: auto;
+	margin-top: 10px;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	min-height: 48px;
+	line-height: 1.5em;
+	background-color: var(--elements);
+	padding: 10px 25px;
+	font-size: 1.1rem;
+	font-weight: 300;
+	color: #fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	cursor: default
+}
+
+.toast .toast-action{
+	color:#eeff41;
+	font-weight:500;
+	margin-right:-25px;
+	margin-left:3rem
+}
+
+.toast.rounded{
+	border-radius:24px
+}
+
+@media only screen and (max-width: 600px){
+	.toast{
+		width:100%;
+		border-radius:0
+	}
+}
